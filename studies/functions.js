@@ -29,18 +29,46 @@
                 console.log(subtract(num1 - num2)); //what you want the function to do
             } //closing curly braces
 
-    /* 3. How do we assign a function to a variable?
-            */
+    // 3. How do we assign a function to a variable?
+            
+            const variableName = function() {
+                //..do something...
+            };
 
+    // 4. Functions can OPTIONALLY take inputs, and OPTIONALLY return a single value. How do we specify inputs, and how do we specify outputs?
+             
+            function exampleFunction(input1, input2) { //input1 and input2 represent optional parameters this function will take
+                return input1 + input2; //using the return keyword we can specify an output. here, i'm concatenating input1 and input2, but could be anything
+            }
+            
+            exampleFunction("cat", "flower"); //invoking the function and passing the two arguments we asked for when we defined the function above 
 
-    /* 4. Functions can OPTIONALLY take inputs, and OPTIONALLY return a single value. How do we specify inputs, and how do we specify outputs?
-            */ 
+    // 5. Scope: Functions can see and modify variables in parent or global scopes. The inverse is NOT true.
+            
+        let array = [1, 2, 3, 4];
+        
+        function addToArray(number) { //this function can access the array variable in the global scope and put it to use
+            array.push(number);
+        }
+        
+        function globalScope() {
+            const localVariable = 'I am inside the function!';
+        }
 
-
-    /* 5. Scope: Functions can see and modify variables in parent or global scopes. The inverse is NOT true.
-            */
-
-
-    /* 6. Closures: Functions form closures around the data they house. If an object returned from the Function and is held in memory somewhere (referenced), 
-that closure stays ALIVE, and data can continue to exist in these closures! (See: our meeting-room app for an example!) (ALSO, see: Understanding 
-JavaScript Closures with Ease) */
+        //console.log(localVariable); //says variable is undefined because it cannot reach inside function to see it
+        
+    /* 6. Closures: Functions form closures around the data they house. If an object is returned from the Function and is held in memory somewhere 
+        (referenced), that closure stays ALIVE, and data can continue to exist in these closures! */
+        
+        function closureExample() {
+            const luckyNumber = 7;
+            return function() {
+                return luckyNumber * 3; //keeps variable alive in returned function
+            };
+        }
+        
+        function anotherClosure(parameter1) {
+            return function(parameter2) {
+                return parameter1 + parameter2; //keeps parameter alive in returned function
+            };
+        }
