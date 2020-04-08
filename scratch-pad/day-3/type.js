@@ -15,10 +15,11 @@
 function isArray(value) {
     // YOUR CODE BELOW HERE //
     
+    //if the value passed to Array.isArray built in method returns true
    if (Array.isArray(value)){
-       return true;
-   } else {
-       return false;
+       return true; //function returns true
+   } else { // if not
+       return false; //function returns false
    }
     
     
@@ -35,8 +36,13 @@ function isArray(value) {
  */
 function isObject(value) {
     // YOUR CODE BELOW HERE //
-    
-    return Object.prototype.toString.call(value) === '[object Object]';
+    /*if calling built in toString method on the value input passed to prototype object is equal to 
+    the class of object evaluates to true*/
+   if (Object.prototype.toString.call(value) === '[object Object]') {
+       return true; //return true
+   } else { //if it does not
+       return false; //return false
+   }
     
     // YOUR CODE ABOVE HERE //
 }
@@ -49,8 +55,14 @@ function isObject(value) {
  */
 function isCollection(value) {
     // YOUR CODE BELOW HERE //
-
-    return Object.prototype.toString.call(value) === '[object Object]' || Array.isArray(value);    
+    
+    /*if calling toString method on the value input passed to prototype object is equal to object type evaluates to true,
+    OR built in method Array.isArray returns true when passed input value*/
+    if (Object.prototype.toString.call(value) === '[object Object]' || Array.isArray(value)) {
+        return true; //return true
+    } else { //if it does not
+        return false; //return false
+    }
     
     // YOUR CODE ABOVE HERE //
 }
