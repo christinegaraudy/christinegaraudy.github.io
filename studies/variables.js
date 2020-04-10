@@ -36,7 +36,9 @@ var myVariable = true;
 myVariable = "someString";
 
 /* 4. var: the only way to declare a variable before ES6. does allow for re-assignment. 
-        scoped to nearest function block. */
+        scoped to nearest function block. Variables declared with var are hoisted to the
+        top of their scope, but without their assignment (they will return undefined until
+        you get to the place at which they are assigned. */
 
 var numberArray = [0, 1, 2, 3]
 for (var i = 0; i < numberArray.length; i++) {
@@ -49,7 +51,8 @@ for (var i = 0; i < numberArray.length; i++) {
 
 
 /* 5. let: allows for the re-assignment of a variable (eg counters, loops). scoped to 
-    nearest enclosing block. not yet supported by IE browsers. */
+    nearest enclosing block. variables declared with let are also hoisted but are 
+    not available until the line where they're declared. not yet supported by IE browsers. */
 
 let x = 12;
 if(x === 12) {
@@ -57,7 +60,9 @@ if(x === 12) {
     console.log(x); //logs 8 because use of let allows variable to be re-assigned
 }
 
-// 6. const: the variable cannot be re-assigned (the variable assignment remains constant)
+/* 6. const: the variable cannot be re-assigned (the variable assignment remains constant).
+    variables declared with const are hoisted but are unavailable until the line where 
+    they're declared.*/
 
 const person = 'Tom';
 //const person = Mark;

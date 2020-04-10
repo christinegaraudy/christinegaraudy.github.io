@@ -1,7 +1,9 @@
 /*
-STRING MANIPULATION: There are many ways in Javascript to get information about strings 
-        (such as their length) and change their behavior or
-        presentation (like making all the characters uppercase or lowercase).
+STRING MANIPULATION: Strings in Javascript are any combination of characters (letters,
+        numbers, or symbols) encased between two single or double quotation marks. 
+        There are many ways in Javascript to get information about strings and change 
+        their behavior or presentation (like making all the characters uppercase 
+        or lowercase). You can also access any character in a string by its index.
 */
 
 // 0. With Operators: 
@@ -31,9 +33,11 @@ STRING MANIPULATION: There are many ways in Javascript to get information about 
 /* 1. With String Methods: Built-in methods in JavaScript which act upon strings. 
     There are many! Here are a few examples: */
     
-// A) .length: returns the length of the string
+// A) .concat: joins two strings and returns new string
             
-        'alligator'.length; // returns 9
+        var reptile1 = 'alligator'; 
+        var reptile2 = 'lizard';
+        console.log(reptile1.concat(reptile2)); //logs alligatorlizard
             
 // B) .trim(): removes unnecessary whitespace in a string
             
@@ -60,3 +64,9 @@ STRING MANIPULATION: There are many ways in Javascript to get information about 
             
         var sound = 'meow';
         console.log(sound.charAt(2)); // logs o
+        
+/* 2. By Index: Strings and arrays are zero-indexed, meaning their first position is
+    referred to as zero, then one, then two, etc. */
+    
+        var stringExample = "sunshine";
+        console.log(stringExample[3]); //logs s to the console

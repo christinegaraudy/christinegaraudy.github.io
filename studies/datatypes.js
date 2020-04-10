@@ -15,16 +15,29 @@
     /* A- Infinity: represents positive infinity. Displayed when a number is larger 
         than the upper limit allowed (larger than max value). */
         
+            //var tooBig = 1.797693134862315E+308; 
+            //console.log(tooBig); //if we tried to log the whole number, it would
+                                    //print infinity because it would exceed the upper
+                                    //limit of floating point integers
+        
     /* B- -Infinity: inverse of infinity. Represents negative infinity.  Displayed 
         when a negative number has more than max number of characters allowed. */
         
+            //var tooSmall = -1.797693134862316E+308;
+            //console.log(tooSmall) //if we tried to log the whole number, it would
+                                    //print infinity because it would exceed the lower
+                                    //limit of floating point integers
  
- /* 1. String: Any character(s) enclosed in single quotation marks, double quotation 
-    marks, or backticks. */
+ /* 1. String: Any character(s) such as letters, numbers, or symbols, enclosed in single 
+    quotation marks, double quotation marks, or backticks. We can access individual 
+    characters in a string using index notation, like we do for arrays.*/
  
         let myString = 'This is string text.';
         let anotherString = "So is this.";
         let alsoString = `I am, too.`;
+        
+        var thisString = "word";
+        console.log(thisString(2)); //logs r to the console
  
  /* 2. Boolean: Binary value of either true or false. Does not need to be enclosed 
     in quotation marks. */

@@ -1,26 +1,34 @@
 /*
 LOOPS: Provide a concise way to perform an action repeatedly until some stopping 
-    condition is met.
+    condition is met.  Loops allow us to execute a code block as many vtimes as 
+    necessary without writing out more code, helping us to keep our code as DRY
+    (don't repeat yourself) and concise as possible.  They are useful for iterating over
+    data collections in arrays and objects, pulling out the values one by one to
+    manipulate.
 */
 
-// 1. The Different Kinds of Loops
+// 1. The Three Different Kinds of Loops
     
 /* A) While Loops: Useful when you know exactly when you want to stop.  Continues 
     looping WHILE some condition is true and stops when that condition becomes false. */
                 
     // While Loop Counting Forward to 4
-                
+         
+        //set counter to where we want to begin        
         let counter = 1; // where we are now
-                
+         
+        //set stopping condition       
         while (counter < 5) { // how long we want to loop
             console.log(counter++); 
         } /* counter ++ is the action we want to happen after each loop. 
             changes the starting condition to prevent endless loop. */
                 
     // While Loop Counting Backwards from 5 to 0
-                
+        
+        //set a counter to where we want to begin        
         let count = 5; // where we are now
-                
+        
+        //define stopping condition        
         while (count > -1) { // how long we want to loop
             console.log(count--); 
         } /* count-- is action we want to happen after each loop. this time we're 
@@ -56,7 +64,7 @@ LOOPS: Provide a concise way to perform an action repeatedly until some stopping
             number: 3,
             cat: 'Lilly'
         };
-                
+            //variable name of key in the given object    
         for (var key in myObject) { // for each key in myObject...
             console.log(key); // console log name of key. logs color, day, number, cat
         }
