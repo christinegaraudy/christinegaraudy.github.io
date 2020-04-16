@@ -387,10 +387,10 @@ _.map = function(collection, func){
 *   _.pluck([{a: "one"}, {a: "two"}], "a") -> ["one", "two"]
 */
 
-_.pluck = function(array, property){
+_.pluck = function(array, property){ //take in an array and a property
 
-    return _.map(array, function(element, index, array){
-        return element[property];
+    return _.map(array, function(element, index, array){ //use map to iterate over the array and call function for each of its element
+        return element[property]; //save the return value of each function call and return the new array
     });
      
 };
