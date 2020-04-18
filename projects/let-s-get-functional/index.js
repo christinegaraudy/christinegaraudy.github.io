@@ -159,7 +159,7 @@ var topThreeTags = function(array) {
         allTags.push(array[i]['tags']);
         allTags.reduce((acc, val) => acc.concat(val), []);
     }
-    var flatTags = allTags.reduce((acc, val) => acc.concat(val), []);
+    var flatTags = allTags.reduce((acc, val) => acc.concat(val), []); //flatten the array to get rid of nesting
      
         //use reduce to count how many times each word appears and save that data in a new object
     let tagCount = _.reduce(flatTags, function(accObj, tag){
