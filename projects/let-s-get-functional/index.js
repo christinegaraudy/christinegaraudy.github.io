@@ -213,7 +213,7 @@ var genderCount = function(array) {
             accumObj[gender] = 1; //if it appears once, save with value equal to 1
         }
         return accumObj; //now there's an object with genders saved as key/value pairs representing how many times they appear in array
-    },{})
+    },{});
     
     return genderCount; //return that object
 };
